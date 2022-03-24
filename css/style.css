@@ -1,0 +1,173 @@
+/*----------------scroll----------*/
+
+.genealogy-scroll::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+.genealogy-scroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #e4e4e4;
+}
+.genealogy-scroll::-webkit-scrollbar-thumb {
+    background: #212121;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.genealogy-scroll::-webkit-scrollbar-thumb:hover {
+    background: #d5b14c;
+    transition: 0.5s;
+}
+
+
+/*----------------tree----------*/
+.genealogy-body{
+    white-space: nowrap;
+    overflow-y: hidden;
+    min-height: 500px;
+    padding-top: 0px;
+    text-align: center;
+}
+.tree{
+  display: inline-block;
+  margin: 0 auto;
+}
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    padding-right: 1px;
+    display: flex;
+    justify-content: center;
+    direction: rtl;
+    text-align: center;
+}
+.tree li {
+    float: right;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0px 5px;
+}
+.tree li::before, .tree li::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-top: 4px solid #070707;
+    width: 50%;
+    height: 18px;
+}
+
+.tree li::after{
+    left: auto;
+    right: 50%;
+    border-right: 4px solid #000000;
+    /* padding: 10px 5px 5px 0px; */
+}
+
+
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+.tree li:only-child{ 
+    padding-top: 0;
+}
+.tree li:first-child::before, .tree li:last-child::after{
+    border: 0 none;
+}
+.tree li:last-child::before{
+    border-left: 4px solid #000000;
+    border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+    border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+}
+.tree ul ul::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 4px solid #0b0b0b;
+    width: 0;
+    height: 20px;
+}
+
+.tree li a{
+    text-decoration: none;
+    color: rgb(37, 24, 45);
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.tree li a:hover, .tree li a:hover+ul li a {
+	background: #7ea1d5;
+    border-radius: 12px 12px 12px 12px;
+  color: rgb(231, 226, 221);
+ 
+}
+.left{
+   float: left;
+}
+.right{
+   float: right;
+}
+.tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before{
+	border-color:  rgb(0, 0, 0);
+}
+
+.col-xs-5 {
+    width: 41.66666667%;
+}
+
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+
+}
+
+@media only screen and (max-width: 767px) { 
+	.col-xs-5 {
+    width: 100%;
+}
+
+ .col-xs-4 {
+    width: 100%;
+}
+	.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+}
+
+.cover .branch {
+    width: 50px;
+    height: 30px;
+    border-radius: 12px 12px 12px 12px;
+    z-index: 1;
+    border: 1px solid #0e0d0d;
+    padding: 10px 5px;
+    
+ 
+}
+
+.backbody {
+     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.imgfilteer{margin-bottom: -5px;}
